@@ -45,7 +45,3 @@ It has been used so far to successfully launch 4 NFT collections:
 2. [Living Fragments](https://opensea.io/collection/living-fragments)
 3. [Vortex](https://vortex.spectra.art)
 4. [Chromospheres](https://chromospheres.spectra.art)
-
-
-### Chromospheres by Spectra.Art
-![Chromospheres image](https://chromo-frontend190757-prod.s3.amazonaws.com/public/assets/blog/blueboy.png)
