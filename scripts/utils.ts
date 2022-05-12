@@ -4,9 +4,9 @@ import { config as dotenvConfig } from "dotenv";
 import { resolve } from "path";
 dotenvConfig({ path: resolve(__dirname, "../.env") });
 
-const infuraKey = process.env.INFURA_API_KEY;
-if (!infuraKey) {
-  throw new Error("Please set your INFURA_API_KEY in a .env file");
+const alchemyKey: string | undefined = process.env.ALCHEMY_KEY;
+if (!alchemyKey) {
+  throw new Error("Please set your ALCHEMY_KEY in a .env file");
 }
 
 export async function getContract(chainId: string) {
@@ -28,9 +28,10 @@ export async function getContract(chainId: string) {
   console.log("got deployed contract", contract.address);
 
   // get a provider for estimating gas
-  const provider = new hre.ethers.providers.InfuraProvider(networkName, [
-    infuraKey,
-  ]);
+  const provider = new hre.ethers.providers.AlchemyProvider(
+    networkName,
+    alchemyKey
+  );
 
   return { contract, provider, networkName };
 }

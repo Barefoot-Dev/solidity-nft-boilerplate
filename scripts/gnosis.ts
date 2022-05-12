@@ -22,9 +22,9 @@ if (!sk) {
   throw "Please set your PRIVATE_KEY in a .env file";
 }
 
-const infuraApiKey: string | undefined = process.env.INFURA_API_KEY;
-if (!infuraApiKey) {
-  throw new Error("Please set your INFURA_API_KEY in a .env file");
+const alchemyKey: string | undefined = process.env.ALCHEMY_KEY;
+if (!alchemyKey) {
+  throw new Error("Please set your ALCHEMY_KEY in a .env file");
 }
 
 // as per example https://github.com/scaffold-eth/scaffold-eth/blob/gnosis-starter-kit/packages/react-app/src/views/EthSignSignature.jsx
@@ -48,9 +48,9 @@ const Signature = class CustomSignature {
 export async function getProvider(chainId: string) {
   let provider;
   if (chainId === "1") {
-    provider = new ethers.providers.InfuraProvider(1, infuraApiKey);
+    provider = new ethers.providers.AlchemyProvider(1, alchemyKey);
   } else if (chainId === "4") {
-    provider = new ethers.providers.InfuraProvider(4, infuraApiKey);
+    provider = new ethers.providers.AlchemyProvider(4, alchemyKey);
   } else {
     throw "Unsupported chainId";
   }
