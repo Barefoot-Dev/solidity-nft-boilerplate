@@ -1,6 +1,8 @@
 # Solidity NFT Boilerplate
 A smart contract development and deployment boilerplate using Hardhat &amp; Ethers.js
 
+*Note that this boilerplate does not yet incorporate recent gas optimisations discovered by the Web3 community, such as ERC-721a smart contracts*
+
 # Tutorial
 Find a detailed and guided tutorial to this repo in the associated [Medium Article](https://medium.com/coinmonks/deploying-a-smart-contract-and-selling-nfts-d6215b1da69)
 # Install and usage
